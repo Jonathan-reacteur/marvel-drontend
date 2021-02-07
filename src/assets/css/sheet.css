@@ -1,0 +1,18 @@
+.listCharacters--center {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.CharacterCard {
+  width: 255px;
+  height: 375px;
+}
+
+.characterThumbnail {
+  object-fit: cover;
+  width: 250px;
+  height: 350px;
+}
