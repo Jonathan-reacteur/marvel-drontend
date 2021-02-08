@@ -1,15 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import CharacterCard from "../components/CharacterCard.js";
+
 const CharacterItem = (props) => {
   const { character } = props;
 
-  const urlLink = "/Comics/" + character._id;
   return (
     <div className="CharacterItem">
-      <Link to={urlLink}>
-        <CharacterCard character={character} />
-      </Link>
+      <CharacterCard character={character} />
     </div>
   );
 };

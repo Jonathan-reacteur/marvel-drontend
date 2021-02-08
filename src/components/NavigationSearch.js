@@ -18,15 +18,6 @@ const NavigationSearch = (props) => {
               console.log("COUCOU");
             }}
           />
-          {/* <input
-            type="text"
-            class="txt"
-            placeholder="Saisissez un nom de hero"
-            value={valueSearch}
-            onChange={(e) => {
-              setValueSearch(e.target.value);
-            }}
-          ></input> */}
         </div>
       </form>
     </div>

@@ -8,7 +8,6 @@ import retrieveFromURL from "../retrieveData/restrieveFromURL";
 //************************************************************/
 
 const retrieveCharactersData = async (setDataCharacter, setIsLoaded, param) => {
-  console.log(param.name);
   setIsLoaded(false);
   const urlToGetAllCharacters = buildURL.buildURLToGetAllCharacters(param);
   const response = await retrieveFromURL(urlToGetAllCharacters);

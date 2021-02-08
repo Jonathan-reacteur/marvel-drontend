@@ -19,15 +19,6 @@ const Home = () => {
     retrieveCharactersData(setDataCharacters, setIsLoaded, param);
   }, [, pageNumber, nameCharacter]);
 
-  /////
-  // useEffect(() => {
-  //   const param = {
-  //     name: nameCharacter,
-  //     skip: (pageNumber - 1) * 100,
-  //   };
-  //   retrieveCharactersData(setDataCharacters, setIsLoaded, param);
-  // }, [pageNumber, nameCharacter]);
-  ///
   return (
     <div className="zer">
       <Banner />
