@@ -6,7 +6,7 @@ const CharacterCard = (props) => {
   return (
     <div>
       {" "}
-      <img className="characterThumbnail" src={urlImg}></img>
+      <img className="characterThumbnail" alt="missing ele" src={urlImg}></img>
     </div>
   );
 };

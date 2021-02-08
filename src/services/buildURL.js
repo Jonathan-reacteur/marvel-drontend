@@ -3,8 +3,6 @@ require("dotenv").config();
 const buildURLToGetAllCharacters = (param) => {
   let stringURL = "";
   let StringParameters = "";
-  console.log("erze");
-  console.log(process.env.REACT_APP_URL_MARVEL_HEROKU);
   if (param) {
     StringParameters = "?" + generateParamList(param);
   }
