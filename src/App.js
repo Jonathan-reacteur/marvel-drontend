@@ -5,7 +5,12 @@ import "../src/assets/css/sheet.css";
 import Comics from "../src/containers/Comics.js";
 import Home from "../src/containers/Home.js";
 
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 // import Home from "../src/containers/Home.js";
 // import Comics from "../src/containers/Comics.js";
 //
@@ -17,7 +22,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route path="/">
+          <Route path="/Home">
             <Home />
           </Route>
           <Route path="/Comics/:id">
@@ -25,6 +30,9 @@ function App() {
           </Route>
           <Route path="/Comics/">
             <Comics />
+          </Route>
+          <Route path="*">
+            <Redirect to="/Home" />
           </Route>
         </Switch>
       </Router>
