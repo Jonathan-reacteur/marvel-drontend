@@ -4,8 +4,8 @@ const ComicsList = (props) => {
   const { comicsList } = props;
   return (
     <div className="comicsList">
-      {comicsList.map((element) => {
-        return <ComicItem comic={element} />;
+      {comicsList.map((element, index) => {
+        return <ComicItem comic={element} key={index} />;
       })}
     </div>
   );

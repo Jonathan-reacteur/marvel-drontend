@@ -11,11 +11,6 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-// import Home from "../src/containers/Home.js";
-// import Comics from "../src/containers/Comics.js";
-//
-//
-//
 
 function App() {
   return (

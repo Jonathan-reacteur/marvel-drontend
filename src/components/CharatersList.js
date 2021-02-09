@@ -7,7 +7,7 @@ const CharactersList = (props) => {
     <div className="charactersList">
       <div className="charactersList--center">
         {listItems.map((element, index) => {
-          return <CharacterItem character={element} />;
+          return <CharacterItem character={element} key={index} />;
         })}
       </div>
     </div>
