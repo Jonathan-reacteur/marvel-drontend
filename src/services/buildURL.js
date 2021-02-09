@@ -37,8 +37,14 @@ const buildURLToGetAllComics = (param) => {
   return stringURL;
 };
 
-export default {
+const buildURL = {
   buildURLToGetAllCharacters,
   buildURLToGetAllComicsWithCharacters,
   buildURLToGetAllComics,
 };
+export default buildURL;
+// export default{
+//   buildURLToGetAllCharacters,
+//   buildURLToGetAllComicsWithCharacters,
+//   buildURLToGetAllComics,
+// };

@@ -28,4 +28,9 @@ const retrieveComicsDataAll = async (setDataCharacter, setIsLoaded, param) => {
   setDataCharacter(response.data.results);
   setIsLoaded(true);
 };
-export default { retrieveComicsDataWithCharacters, retrieveComicsDataAll };
+const retrieveComicsData = {
+  retrieveComicsDataWithCharacters,
+  retrieveComicsDataAll,
+};
+export default retrieveComicsData;
+// export default { retrieveComicsDataWithCharacters, retrieveComicsDataAll };

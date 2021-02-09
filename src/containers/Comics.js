@@ -29,7 +29,7 @@ const Comics = () => {
     } else {
       retrieveComicsData.retrieveComicsDataAll(setDataComics, setIsLoaded);
     }
-  }, []);
+  }, [id]);
   /////
   useEffect(() => {
     const param = {

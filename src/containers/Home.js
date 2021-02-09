@@ -18,13 +18,13 @@ const Home = () => {
     };
     retrieveCharactersData(setDataCharacters, setIsLoaded, param);
   }, [pageNumber, nameCharacter]);
-  useEffect(() => {
-    const param = {
-      name: nameCharacter,
-      skip: (pageNumber - 1) * 100,
-    };
-    retrieveCharactersData(setDataCharacters, setIsLoaded, param);
-  }, []);
+  // useEffect(() => {
+  //   const param = {
+  //     name: nameCharacter,
+  //     skip: (pageNumber - 1) * 100,
+  //   };
+  //   retrieveCharactersData(setDataCharacters, setIsLoaded, param);
+  // }, []);
 
   return (
     <div className="home">
