@@ -45,6 +45,8 @@ const CharacterCard = (props) => {
             src={urlImg}
           ></img>
         </Link>
+        <div className="characterName">{character.name}</div>
+        <div className="characterDesc">{character.description}</div>
         <div
           className="favoris"
           onClick={(e) => {

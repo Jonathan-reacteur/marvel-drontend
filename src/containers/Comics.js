@@ -48,7 +48,11 @@ const Comics = () => {
     <div className="comics">
       <Banner />
       <NavigationBanner />
-      <NavigationSearch valueSearch={title} setValueSearch={setTitle} />
+      <NavigationSearch
+        valueSearch={title}
+        setValueSearch={setTitle}
+        typeSearch="comic"
+      />
       <NavigationThroughPages
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}

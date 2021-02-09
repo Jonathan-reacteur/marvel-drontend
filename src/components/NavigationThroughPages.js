@@ -14,10 +14,21 @@ const NavigationThroughPages = (props) => {
   };
   return (
     <>
-      {pageNumber > 1 ? (
-        <div onClick={() => handlerPageChangeMoins()}>Page précédente</div>
-      ) : null}
-      <div onClick={() => handlerPageChangePlus()}>Page suivante</div>
+      <div className="navigationThroughPages">
+        <div className="navigationThroughPages--center">
+          {pageNumber > 1 ? (
+            <button
+              className="boutonNav"
+              onClick={() => handlerPageChangeMoins()}
+            >
+              Page précédente
+            </button>
+          ) : null}
+          <button className="boutonNav" onClick={() => handlerPageChangePlus()}>
+            Page suivante
+          </button>
+        </div>
+      </div>
     </>
   );
 };

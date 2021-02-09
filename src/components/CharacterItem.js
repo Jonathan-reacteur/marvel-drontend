@@ -5,7 +5,7 @@ const CharacterItem = (props) => {
   const { character } = props;
 
   return (
-    <div className="CharacterItem">
+    <div className="characterItem">
       <CharacterCard character={character} />
     </div>
   );

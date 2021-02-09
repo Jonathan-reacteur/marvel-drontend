@@ -20,13 +20,14 @@ const Home = () => {
   }, [, pageNumber, nameCharacter]);
 
   return (
-    <div className="zer">
+    <div className="home">
       <Banner />
+      <NavigationBanner />
       <NavigationSearch
         valueSearch={nameCharacter}
         setValueSearch={setNameCharacter}
+        typeSearch="character"
       />
-      <NavigationBanner />
       <NavigationThroughPages
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}

@@ -4,10 +4,14 @@ import { Link } from "react-router-dom";
 const NavigationBanner = () => {
   return (
     <div className="navigationBanner">
-      <div className="navigationBannerCenter">
+      <div className="navigationBanner--center">
         <div className="navigationArea">
-          <Link to="/Home">CECI EST UN LIEN VERS L'ACCUEIL</Link>
-          <Link to="/Comics">CECI EST UN LIEN VERS LES COMICS</Link>
+          <Link to="/Home">
+            <div className="navigationBanner--zoneclick">Personnages</div>
+          </Link>
+          <Link to="/Comics">
+            <div className="navigationBanner--zoneclick">Comics</div>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,14 +1,173 @@
-.listCharacters--center {
+.home {
+  display: flex;
+  flex-direction: column;
+}
+/**
+/// BANNIERE
+**/
+
+.banner {
+  background-color: black;
+  border-bottom: 1px solid rgb(122, 15, 15);
+  height: 100px;
+}
+.banner-center {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.logo {
+  height: 100px;
+  margin-right: 150px;
+}
+.banner--text {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100px;
+}
+.banner--text,
+p {
+  font-size: 40px;
+  line-height: 30px;
+  font-weight: bold;
+}
+/**************************/
+
+.navigationBanner {
+  background: #000;
+  height: 50px;
+}
+.navigationBanner {
+  height: 75px;
+}
+.navigationBanner--center {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.navigationArea {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 700px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navigationBanner--zoneclick {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.navigationBanner--zoneclick:hover {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: white;
+  color: black;
+  border-radius: 8px;
+  padding: 8px;
+  transition: 0.3s;
+}
+.navigationBanner--zoneclick:active {
+  color: red;
+}
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+/***************************/
+.navigationSearch--center {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navigationSearch {
+  background-color: black;
+  height: 70px;
+  border-top: white 0.5px solid;
+  border-bottom: white 1px solid;
+}
+.search-box {
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.search-box,
+input {
+  height: 40px;
+  width: 300px;
+}
+.formSearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/***************************/
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+.navigationThroughPages {
+  background-color: black;
+  height: 40px;
+}
+.navigationThroughPages--center {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  height: 40px;
+  flex-direction: row;
+  align-items: center;
+}
+.boutonNav {
+  margin-left: 10px;
+}
+
+/***************************/
+.charactersList {
+  background-color: black;
+  padding-top: 15px;
+}
+.charactersList--center {
   margin: 0 auto;
   max-width: 1200px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+.characterItem {
+  margin-left: 30px;
+}
 
 .CharacterCard {
   width: 255px;
   height: 375px;
+}
+.characterName {
+  color: white;
+  font-weight: bold;
+}
+.characterDesc {
+  color: white;
+  width: 250px;
 }
 
 .characterThumbnail {
