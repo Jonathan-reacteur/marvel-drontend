@@ -1,16 +1,20 @@
-import React from "react";
-
+import React, { useState } from "react";
 import Cookies from "js-cookie";
 import { Link } from "react-router-dom";
 
 const CharacterCard = (props) => {
   const { character } = props;
-  const urlImg = character.thumbnail.path + "." + character.thumbnail.extension;
+  const myCookies = JSON.parse(Cookies.get("listId"));
+  const getIsIteminCookie = myCookies.indexOf(character._id) !== -1;
+  const [isIteminCookie, setIsIteminCookie] = useState(getIsIteminCookie);
 
-  console.log("==" + Cookies.get("listId"));
+  const urlImg = character.thumbnail.path + "." + character.thumbnail.extension;
+  console.log(isIteminCookie);
+
   const urlLink = "/Comics/" + character._id;
 
   const cookieHandlerAdd = (idToAdd) => {
+    setIsIteminCookie(true);
     const contenu = Cookies.get("listId");
     if (!contenu) {
       const tab = [];
@@ -26,6 +30,7 @@ const CharacterCard = (props) => {
   };
   const cookieHandlerRemove = (idToRemove) => {
     const contenu = Cookies.get("listId");
+    setIsIteminCookie(false);
     if (!contenu) {
     } else {
       const tab = JSON.parse(Cookies.get("listId"));
@@ -37,7 +42,7 @@ const CharacterCard = (props) => {
   };
   return (
     <>
-      <div>
+      <div className="characterCard">
         <Link to={urlLink}>
           <img
             className="characterThumbnail"
@@ -47,11 +52,15 @@ const CharacterCard = (props) => {
         </Link>
         <div className="characterName">{character.name}</div>
         <div className="characterDesc">{character.description}</div>
+        {isIteminCookie ? (
+          <div className="isFavori">Cet élément est favori</div>
+        ) : (
+          ""
+        )}
         <div
           className="favoris"
           onClick={(e) => {
             cookieHandlerAdd(character._id);
-            console.log(Cookies.get("listId"));
           }}
         >
           FAVORI
@@ -60,10 +69,9 @@ const CharacterCard = (props) => {
           className="favoris"
           onClick={(e) => {
             cookieHandlerRemove(character._id);
-            console.log(Cookies.get("listId"));
           }}
         >
-          === REMOVE FAVORU
+          === REMOVE FAVORi
         </div>
       </div>
     </>

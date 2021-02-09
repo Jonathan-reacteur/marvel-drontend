@@ -18,29 +18,24 @@ const Comics = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const { id } = useParams();
   //
-  console.log(id);
-  console.log(title + "/" + pageNumber);
+
   useEffect(() => {
     if (id && Object.keys(id).length !== 0) {
-      console.log("getselected");
       retrieveComicsData.retrieveComicsDataWithCharacters(
         setDataComics,
         setIsLoaded,
         id
       );
     } else {
-      console.log("getfulllist B");
       retrieveComicsData.retrieveComicsDataAll(setDataComics, setIsLoaded);
     }
   }, []);
   /////
   useEffect(() => {
-    console.log("getfulllist C");
     const param = {
       title: title,
       skip: (pageNumber - 1) * 100,
     };
-    console.log("aaaa");
     retrieveComicsData.retrieveComicsDataAll(setDataComics, setIsLoaded, param);
   }, [pageNumber, title]);
 
@@ -57,7 +52,11 @@ const Comics = () => {
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}
       />
-      {isLoaded ? <ComicsList comicsList={dataComics} /> : <div>RIEN</div>}
+      {isLoaded ? (
+        <ComicsList comicsList={dataComics} />
+      ) : (
+        <div>Chargement en cours ...</div>
+      )}
     </div>
   );
 };

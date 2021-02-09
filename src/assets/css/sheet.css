@@ -161,6 +161,9 @@ input {
   width: 255px;
   height: 375px;
 }
+.characterCard {
+  color: white;
+}
 .characterName {
   color: white;
   font-weight: bold;
