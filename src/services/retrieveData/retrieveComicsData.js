@@ -24,7 +24,6 @@ const retrieveComicsDataWithCharacters = async (
 const retrieveComicsDataAll = async (setDataCharacter, setIsLoaded, param) => {
   setIsLoaded(false);
   const urlToGetAllComics = buildURL.buildURLToGetAllComics(param);
-  console.log(urlToGetAllComics);
   const response = await retrieveFromURL(urlToGetAllComics);
   setDataCharacter(response.data.results);
   setIsLoaded(true);
