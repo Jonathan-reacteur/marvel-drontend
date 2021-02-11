@@ -9,7 +9,7 @@ import favoriteUnselected from "../assets/img/favoriteUnselected.png";
 const CharacterCard = (props) => {
   const { character } = props;
 
-  const myCookies = JSON.parse(Cookies.get("listId") || "");
+  const myCookies = JSON.parse(Cookies.get("listId") || "{}");
   const getIsIteminCookie = myCookies.indexOf(character._id) !== -1;
   const [isIteminCookie, setIsIteminCookie] = useState(getIsIteminCookie);
 
