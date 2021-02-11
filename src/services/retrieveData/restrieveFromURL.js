@@ -7,8 +7,8 @@ require("dotenv").config();
 //                                                           */
 //************************************************************/
 
-const retrieveFromURL = async (FullURL) => {
-  const response = await axios.get(FullURL).catch((error) => {
+const retrieveFromURL = async (fullURL) => {
+  const response = await axios.get(fullURL).catch((error) => {
     //       // Affichera d'éventuelles erreurs, notamment en cas de problème de connexion Internet.
 
     console.error(error);
