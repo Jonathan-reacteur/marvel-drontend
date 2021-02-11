@@ -1,7 +1,7 @@
 import React from "react";
 
 const NavigationThroughPages = (props) => {
-  const { setPageNumber, pageNumber } = props;
+  const { setPageNumber, pageNumber, countPage } = props;
 
   const handlerPageChangePlus = () => {
     const nbpage = pageNumber + 1;
@@ -11,6 +11,10 @@ const NavigationThroughPages = (props) => {
   const handlerPageChangeMoins = () => {
     const nbpage = pageNumber - 1;
     setPageNumber(nbpage);
+  };
+  const handlePageChange = (pageNumberToChange) => {
+    console.log(`active page is ${pageNumberToChange}`);
+    setPageNumber({ pageNumberToChange });
   };
   return (
     <>

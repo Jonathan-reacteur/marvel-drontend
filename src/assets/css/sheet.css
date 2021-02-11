@@ -2,7 +2,10 @@
   display: flex;
   flex-direction: column;
 }
-/**
+html {
+  scroll-behavior: smooth;
+}
+/** =====================================================
 /// BANNIERE
 **/
 
@@ -28,14 +31,17 @@
   flex-direction: column;
   justify-content: center;
   height: 100px;
+  line-height: 110px;
 }
 .banner--text,
 p {
   font-size: 40px;
-  line-height: 30px;
+  line-height: 50px;
   font-weight: bold;
 }
-/**************************/
+/**
+/// Zone de navigation
+**/
 
 .navigationBanner {
   background: #000;
@@ -89,7 +95,9 @@ a {
 a:visited {
   text-decoration: none;
 }
-/***************************/
+/** =====================================================
+/// Zone de navigation
+**/
 .navigationSearch--center {
   margin: 0 auto;
   max-width: 1200px;
@@ -103,6 +111,9 @@ a:visited {
   height: 70px;
   border-top: white 0.5px solid;
   border-bottom: white 1px solid;
+}
+.formSearch {
+  margin-left: 50px;
 }
 .search-box {
   height: 70px;
@@ -120,7 +131,9 @@ input {
   flex-direction: column;
   justify-content: center;
 }
-/***************************/
+/** =====================================================
+/// Zone de pagination
+**/
 .nav {
   display: flex;
   flex-direction: row;
@@ -140,8 +153,14 @@ input {
 .boutonNav {
   margin-left: 10px;
 }
-
-/***************************/
+/** =====================================================
+/// Fiches personnages
+**/
+.imageContainer {
+  position: relative;
+  text-align: center;
+  color: white;
+}
 .charactersList {
   background-color: black;
   padding-top: 15px;
@@ -154,12 +173,16 @@ input {
   flex-wrap: wrap;
 }
 .characterItem {
-  margin-left: 30px;
+  margin-left: 50px;
+  margin-bottom: 30px;
+  border-radius: 6px;
+  border: rgb(54, 54, 54) 1px solid;
+  overflow: hidden;
 }
 
 .CharacterCard {
-  width: 255px;
-  height: 375px;
+  width: 220px;
+  height: 310px;
 }
 .characterCard {
   color: white;
@@ -167,6 +190,20 @@ input {
 .characterName {
   color: white;
   font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(29, 29, 29, 0.733);
+  padding-bottom: 20px;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.characterName:hover {
+  text-decoration: underline;
+}
+.characterName,
+p {
+  font-size: 1.2em;
 }
 .characterDesc {
   color: white;
@@ -175,6 +212,57 @@ input {
 
 .characterThumbnail {
   object-fit: cover;
-  width: 250px;
-  height: 350px;
+  width: 220px;
+  height: 310px;
+}
+
+.favoriteIcon {
+  top: 5px;
+  right: 5px;
+  width: 60px;
+  position: absolute;
+}
+.favoriteIcon:hover {
+  cursor: grab;
+}
+
+.loadingData {
+  height: 500px;
+  background-color: black;
+  color: white;
+  padding-top: 20px;
+  font-size: 33px;
+  font-weight: bold;
+}
+.pagination {
+  display: inline-block;
+  color: white;
+  background-color: grey;
+}
+
+.pagination a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+}
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+.pagination a {
+  border-radius: 5px;
+}
+
+.pagination a.active {
+  border-radius: 5px;
 }

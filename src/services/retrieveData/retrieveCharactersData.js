@@ -7,13 +7,19 @@ import retrieveFromURL from "../retrieveData/restrieveFromURL";
 //                                                           */
 //************************************************************/
 
-const retrieveCharactersData = async (setDataCharacter, setIsLoaded, param) => {
+const retrieveCharactersData = async (
+  setDataCharacter,
+  setIsLoaded,
+  setCount,
+  param
+) => {
   setIsLoaded(false);
   const urlToGetAllCharacters = buildURL.buildURLToGetAllCharacters(param);
 
   console.log(urlToGetAllCharacters);
   const response = await retrieveFromURL(urlToGetAllCharacters);
   setDataCharacter(response.data.results);
+  setCount(response.data.count);
   setIsLoaded(true);
 };
 export default retrieveCharactersData;

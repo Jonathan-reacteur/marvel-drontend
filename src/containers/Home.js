@@ -10,21 +10,15 @@ const Home = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [pageNumber, setPageNumber] = useState(1);
   const [nameCharacter, setNameCharacter] = useState("");
+  const [count, setCount] = useState(0);
   //
   useEffect(() => {
     const param = {
       name: nameCharacter,
       skip: (pageNumber - 1) * 100,
     };
-    retrieveCharactersData(setDataCharacters, setIsLoaded, param);
+    retrieveCharactersData(setDataCharacters, setIsLoaded, setCount, param);
   }, [pageNumber, nameCharacter]);
-  // useEffect(() => {
-  //   const param = {
-  //     name: nameCharacter,
-  //     skip: (pageNumber - 1) * 100,
-  //   };
-  //   retrieveCharactersData(setDataCharacters, setIsLoaded, param);
-  // }, []);
 
   return (
     <div className="home">
@@ -38,12 +32,15 @@ const Home = () => {
       <NavigationThroughPages
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}
+        countPage={count}
       />
 
       {isLoaded ? (
         <CharactersList items={dataCharacters} pageNumber={pageNumber} />
       ) : (
-        <div>Chargement en cours, veuillez patienter . . . .</div>
+        <div className="loadingData">
+          Chargement en cours, veuillez patienter . . . .
+        </div>
       )}
     </div>
   );

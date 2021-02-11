@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 // IMPORT COMPONENTS
 import Banner from "../components/Banner.js";
@@ -15,15 +16,16 @@ const Comics = () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [title, setTitle] = useState("");
   const [pageNumber, setPageNumber] = useState(1);
+  const { id } = useParams();
   //
 
   useEffect(() => {
-    const param = {
-      title: title,
-      skip: (pageNumber - 1) * 100,
-    };
-    retrieveComicsData.retrieveComicsDataAll(setDataComics, setIsLoaded, param);
-  }, [pageNumber, title]);
+    retrieveComicsData.retrieveComicsDataWithCharacters(
+      setDataComics,
+      setIsLoaded,
+      id
+    );
+  }, []);
 
   return (
     <div className="comics">
