@@ -39,7 +39,11 @@ const Comics = () => {
         setPageNumber={setPageNumber}
       />
       {isLoaded ? (
-        <ComicsList comicsList={dataComics} />
+        <div className="comicZone">
+          <div className="comics--center">
+            <ComicsList comicsList={dataComics} />
+          </div>
+        </div>
       ) : (
         <div className="loadingData">Chargement en cours ...</div>
       )}

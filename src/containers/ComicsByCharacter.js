@@ -7,6 +7,7 @@ import NavigationBanner from "../components/NavigationBanner.js";
 import NavigationSearch from "../components/NavigationSearch.js";
 import NavigationThroughPages from "../components/NavigationThroughPages.js";
 import ComicsList from "../components/ComicsList.js";
+import ComicAreaByCharacter from "../components/ComicAreaByCharacter.js";
 
 // IMPORT UTILS
 import retrieveComicsData from "../services/retrieveData/retrieveComicsData";
@@ -40,11 +41,16 @@ const Comics = () => {
         pageNumber={pageNumber}
         setPageNumber={setPageNumber}
       />
-      {isLoaded ? (
-        <ComicsList comicsList={dataComics} />
-      ) : (
-        <div className="loadingData">Chargement en cours ...</div>
-      )}
+      <div className="comicZone">
+        {isLoaded ? (
+          <>
+            <ComicAreaByCharacter />
+            <ComicsList comicsList={dataComics} />
+          </>
+        ) : (
+          <div className="loadingData">Chargement en cours ...</div>
+        )}
+      </div>
     </div>
   );
 };

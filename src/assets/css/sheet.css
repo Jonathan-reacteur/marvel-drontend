@@ -266,3 +266,41 @@ p {
 .pagination a.active {
   border-radius: 5px;
 }
+/**********$**/
+.comics--center {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.comics {
+}
+.comicZone {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+.comicThumbnailImg {
+  width: 150px;
+  object-fit: cover;
+}
+
+.comicCard {
+  display: flex;
+  flex-direction: row‡;
+}
+.comic-text {
+  display: flex;
+  flex-direction: column;
+}
+.comicTitle {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.comicDescription {
+}
+.comic-text {
+  margin: 15px;
+}
+.comicItem {
+  margin: 20px;
+}
